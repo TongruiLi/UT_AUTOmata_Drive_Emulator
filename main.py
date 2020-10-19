@@ -20,7 +20,7 @@ def on_press(key):
     if hasattr(key, "char") and key.char == "w":
         msg.velocity = VEL
     elif hasattr(key, "char") and key.char == "s":
-        msg.velocity = 0
+        msg.velocity = -1
     elif hasattr(key, "char") and key.char == "a":
         msg.curvature = LEFT_CURV
     elif hasattr(key, "char") and key.char == "d":
@@ -34,6 +34,8 @@ def on_release(key):
         msg.curvature = 0
     elif hasattr(key, "char") and key.char == "d":
         msg.curvature = 0
+    elif hasattr(key, "char") and key.char == "s":
+        msg.curvature = 0        
     if key == Key.esc:
         return False
 
